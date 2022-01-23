@@ -1,0 +1,109 @@
+body{
+    background-image: url('images/slider5.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+table{
+    width: 80%;
+    margin: 40px auto;
+    background: rgb(124,154,167);
+}
+
+table.list{
+    text-align: center;
+    width: 100%;
+}
+
+td{
+    border: 1px solid rgb(204,200,200);
+    text-align: left;
+    padding: 8px 15px;
+}
+
+tr:nth-child(even), table.list thread> tr{
+    background-color: rgb(204,200,200);
+}
+
+input[type="text"],input[type="number"]{
+    width:91%;
+    padding:12px 20px;
+    margin:8px 0;
+    display: inline-block;
+    border: 1px solid rgb(165,161,161);
+    border-radius: 4px;
+}
+
+input[type="submit"],input[type="reset"]{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    background: #4b99d8;
+}
+
+input[type="reset"]:hover{
+    background: #4b99d8;
+}
+
+button{
+    background: #eee;
+    padding:6px 12px;
+    margin:15px 0 10px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover{
+    background:#4b99d8 ;
+}
+
+.logo{
+    float:left;
+    margin-top: 0.8em;
+}
+.header-top-nav ul li{
+    display: inline-block;
+    border-left: 1px solid rgba(85, 85, 85, 0.41);
+    float: left;
+
+}
+
+.header-top-nav ul li a{
+    color: #FFF;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: block;
+    padding: 11px 95.5px;
+    transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
+.header-top-nav li.active> a, .header-top-nav li> a:hover {
+    color: #ff9900;
+    background: #454545;
+}
+
+.header{
+    background-color: white;
+    margin-bottom: 5%;
+}
+.header-top{
+    padding: 41px 0 30px 0;
+}
+

@@ -3,13 +3,15 @@ Author: TEAM5
 
 -->
 <!DOCTYPE HTML>
-<html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
-	<title>Hotel Website | Gallery</title>
+	<title>Restolist Website | Home</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body>
 <!---start-Wrap--->
@@ -18,11 +20,13 @@ Author: TEAM5
 	<div class="wrap">
 		<div class="header-top">
 			<div class="logo">
-				<a href="homepage.html"><h2 style="font-family:Sofia,sans-serif; font-size:50px;">Restolist</h2></a>
+				<a href="homepage.html"><h2 style="font-family:Sofia,sans-serif; font-size:50px;"><i class="fas fa-hotel" style='font-size:36px'></i> Restolist</h2></a>
+				<!--<a href="login.html" style="margin-left: 600%;"><button style='font-size:24px;color: #18d26e'>Back <i class='fas fa-chevron-circle-left'></i></button></a>-->
 			</div>
 			<div class="contact-info">
 				<p class="phone">Call us : <a href="#">9860767468</a></p>
 				<p class="gpa">Gpa : <a href="https://goo.gl/maps/kunb7UF9N1BVKJaB9">View map</a></p>
+				<i class="fa fa-user-circle" style="font-size:24px; color: #995c00" id="emailId"></i>
 			</div>
 			<div class="clear"> </div>
 		</div>
@@ -30,10 +34,10 @@ Author: TEAM5
 	<div class="header-top-nav">
 		<div class="wrap">
 			<ul>
-				<li><a href="gallery.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
+				<!--<li><a href="gallery.html">Home</a></li>-->
 				<li class="active"><a href="gallery.html">Restaurants</a></li>
-				<li><a href="#">View bookings</a></li>
+				<li><a href="bookingdetails.html">View bookings</a></li>
+				<li><a href="about.html">About</a></li>
 				<li><a href="login.html">logout</a></li>
 				<div class="clear"> </div>
 			</ul>
@@ -43,65 +47,56 @@ Author: TEAM5
 <!---End-header--->
 <div class="clear"> </div>
 <!---start-content----->
+<div class="container">
 <div class="content">
 	<div class="wrap">
 		<!----start-image-gallery----->
 		<div class="gallerys">
 			<h3>gallery</h3>
-			<div class="gallery-grids">
-				<div class="gallery-grid">
-					<a href="images/slider1.jpg"><img src="images/slider1.jpg" alt=""></a>
-					<h4>A2B restuarant</h4>
-					<p>Description</p>
-					<div class="gallery-button"><a href="booking.html">Book A Table</a></div>
-				</div>
-				<div class="gallery-grid grid2">
-					<a href="images/slider4.jpg"><img src="images/slider4.jpg" alt=""></a>
-					<h4>coal barbeque</h4>
-					<p>Description</p>
-					<div class="gallery-button"><a href="booking.html">Book A Table</a></div>
-				</div>
-				<div class="gallery-grid">
-					<a href="images/slider5.jpg"><img src="images/slider5.jpg" alt=""></a>
-					<h4>NH7 refuel</h4>
-					<p>Description</p>
-					<div class="gallery-button"><a href="booking.html">Book A Table</a></div>
-				</div>
+
 				<div class="clear"> </div>
 			</div>
 			<div class="clear"> </div>
-			<div class="gallery-grids">
-				<div class="gallery-grid">
-					<a href="images/slider7.jpg"><img src="images/slider7.jpg" alt=""></a>
-					<h4>dakskin</h4>
-					<p> Description</p>
-					<div class="gallery-button"><a href="booking.html">Book A Table</a></div>
-				</div>
-				<div class="gallery-grid grid2">
-					<a href="images/slider6.jpg"><img src="images/slider6.jpg" alt=""></a>
-					<h4>bazaar</h4>
-					<p>Description</p>
-					<div class="gallery-button"><a href="booking.html">Book A Table</a></div>
-				</div>
-				<div class="gallery-grid">
-					<a href="images/slider8.jpg"><img src="images/slider8.jpg" alt=""></a>
-					<h4>krishna sagar</h4>
-					<p>Description</p>
-					<div class="gallery-button"><a href="booking.html">Book A Table</a></div>
-				</div>
+			<section class="product">
+			<div id="imagesList" class="box-container"> </div></section></br></br>
+
+				<div><a class="text3" href="booking.html">Book A Table</a></div>
 			</div>
+</div>
 			<script type="text/javascript" src="js/jquery.lightbox.js"></script>
 			<link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen">
 			<script type="text/javascript">
-				<!--$(function() {
-					$('.gallery-grid a').lightBox();
-				});-->
+				fetch("http://localhost:2000/imageList")
+						.then(res=> res.json())
+						.then(data=>{
+
+							if(data.length > 0){
+								var temp = "";
+
+								data.forEach((u)=>{
+
+
+									temp +="<div class='box'>";
+									temp +=	"<img src=\"data:image/png;base64,"
+									temp += u.imageString+"\"";
+									temp += ">";
+									temp +=	"<h4 class='text1'>" + u.resname + "</h4>";
+									temp +=	"<h4 class='text2'><strong>Location : </strong>"+u.resplace+ "</h4>";
+									temp +=	"<h4 class='text2'><strong>Table Price : </strong>" +u.resprice+ "</h4>";
+									temp +=	"</div>";
+								})
+								document.getElementById("imagesList").innerHTML=temp;
+							}
+						});
+
+				console.log("hello");
+				document.getElementById("emailId").innerHTML=" "+sessionStorage.getItem("user");
 			</script>
 			<div class="clear"> </div>
 			<div class="projects-bottom-paination">
 				<ul>
 					<li class="active"><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
+					<!--<li><a href="#">2</a></li>-->
 				</ul>
 			</div>
 		</div>
@@ -113,7 +108,6 @@ Author: TEAM5
 			<div class="box">
 
 			</div>
-
 			<div class="box">
 
 			</div>

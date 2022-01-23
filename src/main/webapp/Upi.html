@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPI</title>
+    <link rel="stylesheet" href="payment.css" >
+</head>
+<body>
+
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const product = urlParams.get('restolist')
+    var price;
+    fetch("http://localhost:8080/restaurant").then(
+        res=>{
+            res.json().then(
+                data=>{
+                    console.log(data);
+                    if(data.length > 0){
+                        data.forEach((u)=>{
+                                if(u.resname.includes(product)){
+                                    price=u.resprice;
+                                    document.getElementById("price").innerHTML="Total Price = "+price+"  /-";
+                                }
+                            }
+                        )
+                    }
+
+                }
+            )
+        }
+    )
+</script>
+
+<div class="mainscreen">
+    <!-- <img src="https://image.freepik.com/free-vector/purple-background-with-neon-frame_52683-34124.jpg"  class="bgimg " alt="">-->
+    <div class="card">
+        <div class="leftside">
+            <img
+                    src="payment.jpg"
+                    class="product"
+                    alt="Restaurant"
+            />
+        </div>
+        <div class="rightside">
+            <form action="/upicheck">
+                <h1>CheckOut</h1><br>
+                <div id="price" style="color: #dc3545; font-size: 30px"></div><br>
+                <section>
+                    <button style="color: purple"><a style="text-decoration: none;" href="Payment.html">CARD</a></button>
+                </section>
+                <h2>UPI Payment</h2>
+                <p>UPI Id:</p>
+                <input type="text" class="inputbox" name="UpiCheck" required />
+                <button type="submit" class="button">PROCEED </button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

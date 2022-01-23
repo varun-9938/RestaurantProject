@@ -1,0 +1,114 @@
+<html>
+<head>
+    <title>Admin Operations</title>
+    <link type="text/css" rel="stylesheet" href="AdminOpStyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restolist Website | Home</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/responsiveslides.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+
+    <!---start-Wrap--->
+    <!---start-header--->
+    <div class="header" style="width: 100%">
+        <div class="wrap">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html"><h2 style="font-family:Sofia,sans-serif; font-size:50px;">Restolist</h2></a>
+                </div>
+                <div class="contact-info">
+                    <p class="phone">Call us : <a href="#">9860767468</a></p>
+                    <p class="gpa">Gpa : <a href="#">View map</a></p>
+
+                </div>
+                <div class="clear"> </div>
+            </div>
+        </div>
+    </div>
+</head>
+
+
+<table>
+    <tr>
+        <td>
+            <form autocomplete="off" action="adminoperation2">
+                <div>
+                    <label for="resid">Restaurant ID</label>
+                    <input type="number" name="resid" id="resid">
+                </div>
+                <!--<div>
+                    <label for="resname">Restaurant Name</label>
+                    <input type="text" name="resname" id="resname">
+                </div>
+                <div>
+                    <label for="resplace">Restaurant Place</label>
+                    <input type="text" name="resplace" id="resplace">
+                </div>
+                <div>
+                    <label for="resprice">Table Price</label>
+                    <input type="text" name="resprice" id="resprice">
+                </div>
+                <div>
+                    <label for="img">Restaurant Image</label>
+                    <input type="file" name="img" id="img">
+                </div>-->
+
+                <div class="form_action--button">
+              <!--      <input type="submit" name="value" id="add-button" value="Add">
+                    <input type="submit" name="value" id="modify-button" value="Modify">-->
+                    <input type="submit" name="value" id="delete-button" value="Delete">
+                    <input type="reset" value="Reset">
+                </div>
+            </form>
+
+        <td>
+            <table class="list">
+                <thead>
+                <tr>
+                    <th>Restaurant ID</th>
+                    <th>Restaurant Name</th>
+                    <th>Restaurant Place</th>
+                    <th>Table Price</th>
+                </tr>
+                </thead>
+                <tbody id="data">
+
+                </tbody>
+            </table>
+        </td>
+        </td>
+    </tr>
+</table>
+<script type="text/javascript">
+    fetch("http://localhost:2000/restaurant").then(
+        res=>{
+            res.json().then(
+                data=>{
+                    console.log(data);
+                    if(data.length > 0){
+                        var temp = "";
+
+                        data.forEach((u)=>{
+
+                            temp +="<tr>";
+                            temp +="<td>"+u.resid+"</td>";
+                            temp +="<td>"+u.resname+"</td>";
+                            temp +="<td>"+u.resplace+"</td>";
+                            temp +="<td>"+u.resprice+"</td></tr>";
+                        })
+                        document.getElementById("data").innerHTML=temp;
+                    }
+                }
+            )
+        }
+    )
+
+
+
+
+</script>
+</body>
+</html>
