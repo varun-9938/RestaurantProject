@@ -1,4 +1,5 @@
 body {
+    background:#eeeeee;
     font-family: 'Roboto', sans-serif!important;
     margin:0;
     padding:0;
@@ -12,10 +13,10 @@ body {
     width: 50%;
     display: flex;
     flex-direction: column;
-    background-color: #DFDBE5;
     background-image: url("https://wallpaperaccess.com/full/3063067.png");
     color:#963E7B !important;
     margin-left: 50%;
+
 }
 
 .card {
@@ -38,8 +39,9 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    /*border-top-left-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;*/
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    opacity: 0.9;
 }
 
 .product {
@@ -55,6 +57,7 @@ body {
     border-bottom-right-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     padding: 1rem 2rem 3rem 3rem;
+    opacity: 0.9;
 }
 
 p{

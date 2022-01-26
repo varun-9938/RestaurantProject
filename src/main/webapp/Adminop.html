@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Restolist Website | Home</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href="css/admin.css" rel="stylesheet" type="text/css"  media="all" />
     <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/responsiveslides.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
@@ -56,9 +56,14 @@
                         <input type="text" name="resprice" id="resprice">
                     </div>
                     <div>
+                        <label for="resstar">Restaurant Rating</label>
+                        <input type="number" class="fa fa-star" name="resstar" id="resstar">
+                    </div>
+                    <div>
                         <label for="img">Restaurant Image</label>
                         <input type="file" name="img" id="img">
                     </div>
+
 
                     <div class="form_action--button">
                         <input type="submit" name="value" id="add-button" value="Add">
@@ -77,6 +82,7 @@
                                 <th>Restaurant Name</th>
                                 <th>Restaurant Place</th>
                                 <th>Table Price</th>
+                                <th>Ratings</th>
                             </tr>
                         </thead>
                         <tbody id="data">
@@ -101,7 +107,8 @@
                             temp +="<td>"+u.resid+"</td>";
                             temp +="<td>"+u.resname+"</td>";
                             temp +="<td>"+u.resplace+"</td>";
-                            temp +="<td>"+u.resprice+"</td></tr>";
+                            temp +="<td>"+u.resprice+"</td>";
+                            temp +="<td>"+u.resstar+"</td></tr>";
                         })
                         document.getElementById("data").innerHTML=temp;
                     }

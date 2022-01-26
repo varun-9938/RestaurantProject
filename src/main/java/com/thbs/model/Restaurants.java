@@ -1,11 +1,7 @@
 package com.thbs.model;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.sql.Blob;
 
 /**
  * Restaurant POJO class that has attributes for CRUD operations to be performed by admin
@@ -20,16 +16,18 @@ public class Restaurants
     private String resname;
     private String resplace;
     private int resprice;
+    private int resstar;
     public byte[] image;
 
     public Restaurants() {
     }
 
-    public Restaurants(int resid, String resname, String resplace, int resprice) {
+    public Restaurants(int resid, String resname, String resplace, int resprice,int resstar) {
         this.resid = resid;
         this.resname = resname;
         this.resplace = resplace;
         this.resprice = resprice;
+        this.resstar = resstar;
     }
 
     public int getResid() {
@@ -72,6 +70,15 @@ public class Restaurants
         this.image = image;
     }
 
+    public int getResstar()
+    {
+        return resstar;
+    }
+
+    public void setResstar(int resstar) {
+        this.resstar = resstar;
+    }
+
     @Override
     public String toString() {
         return "restaurants{" +
@@ -79,6 +86,7 @@ public class Restaurants
                 ", resname='" + resname + '\'' +
                 ", resplace='" + resplace + '\'' +
                 ", resprice=" + resprice +
+                ", resstar=" + resstar +
                 '}';
     }
 }

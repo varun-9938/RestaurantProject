@@ -35,11 +35,11 @@ img{max-width:100%;}
  * start-header
  ============================*/
 .header{
-	background-color: #cccccc;
+	background-color: white;
 	margin-bottom: 5%;
 }
 .header-top{
-	padding: 41px 0 30px 0;
+	padding: 20px 0 15px 0;
 }
 .logo{
 	float:left;
@@ -616,7 +616,7 @@ img{max-width:100%;}
 }
 .gallerys h3{
 	font-family: 'PT Sans Narrow', sans-serif;
-	font-size: 40px;
+	font-size: 30px;
 	font-weight: 400;
 	line-height: 2em;
 	margin: 0;
@@ -709,14 +709,14 @@ img{max-width:100%;}
 }
 .group:before,
 .group:after {
-    content:"";
-    display:table;
+	content:"";
+	display:table;
 }
 .group:after {
-    clear:both;
+	clear:both;
 }
 .group {
-    zoom:1;
+	zoom:1;
 }
 .col{
 	display: block;
@@ -725,14 +725,14 @@ img{max-width:100%;}
 }
 .col:first-child{
 	margin-left:0;
-}	
+}
 .span_2_of_3 {
 	width: 63.1%;
-	padding:1.5%; 
+	padding:1.5%;
 }
 .span_1_of_3 {
 	width: 29.2%;
-	padding:1.5%; 
+	padding:1.5%;
 }
 .span_2_of_3  h3,
 .span_1_of_3  h3 {
@@ -759,20 +759,20 @@ img{max-width:100%;}
 	font-family: 'PT Sans Narrow', sans-serif;
 }
 .contact-form input[type="text"],.contact-form textarea{
-		    padding:8px;
-			display:block;
-			width:98%;
-			border: none;
-			outline:none;
-			color:#464646;
-			font-size:0.8125em;
-			font-family:Arial, Helvetica, sans-serif;
-			border: 1px solid rgba(192, 192, 192, 0.41);
-			-webkit-appearance:none;
+	padding:8px;
+	display:block;
+	width:98%;
+	border: none;
+	outline:none;
+	color:#464646;
+	font-size:0.8125em;
+	font-family:Arial, Helvetica, sans-serif;
+	border: 1px solid rgba(192, 192, 192, 0.41);
+	-webkit-appearance:none;
 }
 .contact-form textarea{
-		resize:none;
-		height:120px;		
+	resize:none;
+	height:120px;
 }
 .contact-form input[type="submit"]{
 	font-family: 'PT Sans Narrow', sans-serif;
@@ -819,7 +819,7 @@ img{max-width:100%;}
 }
 .text1{
 	font-family: Arial, Helvetica, sans-serif;
-/*	background-color:DodgerBlue;*/
+	/*	background-color:DodgerBlue;*/
 	/*height: 200px;
 	width: 50%;*/
 	font-size: 2.0em;
@@ -850,7 +850,7 @@ img{max-width:100%;}
 @media only screen and (max-width: 1024px) {
 	.wrap{
 		width:95%;
-	}	
+	}
 }
 /*  GO FULL WIDTH AT LESS THAN 800 PIXELS */
 
@@ -860,14 +860,14 @@ img{max-width:100%;}
 	}
 	.span_2_of_3 {
 		width:94%;
-		padding:3%; 
+		padding:3%;
 	}
-	.col{ 
+	.col{
 		margin: 1% 0 1% 0%;
 	}
 	.span_1_of_3 {
 		width:94%;
-		padding:3%; 
+		padding:3%;
 	}
 }
 
@@ -879,17 +879,17 @@ img{max-width:100%;}
 	}
 	.span_2_of_3 {
 		width:94%;
-		padding:3%; 
+		padding:3%;
 	}
-	.col{ 
+	.col{
 		margin: 1% 0 1% 0%;
 	}
 	.span_1_of_3 {
 		width:94%;
-		padding:3%; 
+		padding:3%;
 	}
-   
-   .contact-form input[type="text"],.contact-form textarea{
+
+	.contact-form input[type="text"],.contact-form textarea{
 		width:97%;
 	}
 }
@@ -901,14 +901,14 @@ img{max-width:100%;}
 	}
 	.span_2_of_3 {
 		width:90%;
-		padding:5%; 
+		padding:5%;
 	}
-	.col { 
+	.col {
 		margin: 1% 0 1% 0%;
 	}
 	.span_1_of_3 {
 		width:90%;
-		padding:5%; 
+		padding:5%;
 	}
 	.contact-form input[type="text"],.contact-form textarea{
 		width:92%;
@@ -1115,15 +1115,7 @@ img{max-width:100%;}
 	padding-top: 1rem;
 }
 
-.container{
-	margin:auto;
-	font-weight:bold;
-	width: 85%;
-	padding:1%;
-	align-items: center;
-	background-color: white;
-	opacity: 0.85;
-}
+
 
 .category .box-container .box{
 	border:.1rem solid rgba(0,0,0,.3);
@@ -1132,7 +1124,6 @@ img{max-width:100%;}
 	padding:2rem;
 	flex:1 1 25rem;
 }
-
 
 
 .category .box-container .box img{
@@ -1175,7 +1166,7 @@ img{max-width:100%;}
 	flex:1 1 30rem;
 	text-align: center;
 	padding:2rem;
-	border: 5px solid rgba(0,0,0);
+	border:.2px solid rgba(0,0,0);
 	border-radius: .5rem;
 	overflow: hidden;
 	position: relative;
@@ -1283,7 +1274,7 @@ img{max-width:100%;}
 
 
 .product .box-container .box .quantity input{
-	border: 5px solid rgba(0,0,0);
+	border:.5px solid rgba(0,0,0);
 	font-size: 1.5rem;
 	font-weight: bolder;
 	color:var(--black);
@@ -1306,8 +1297,9 @@ img{max-width:100%;}
 	--black:#2c2c54;
 }
 
+
  body{
-	 background-image: url("adminop.jpg");
+	 background:#eeeeee;
 	 background-repeat: no-repeat;
 	 background-attachment: fixed;
 	 background-size: cover;
@@ -1378,3 +1370,4 @@ button{
 button:hover{
 	background:#4b99d8 ;
 }
+

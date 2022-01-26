@@ -39,7 +39,7 @@ img{max-width:100%;}
     margin-bottom: 5%;
 }
 .header-top{
-    padding: 41px 0 30px 0;
+    padding: 20px 0 15px 0;
 }
 .logo{
     float:left;
@@ -1335,7 +1335,7 @@ tr:nth-child(even), table.list thread> tr{
 }
 
 input[type="text"],input[type="number"]{
-    width:91%;
+    width:100%;
     padding:12px 20px;
     margin:8px 0;
     display: inline-block;

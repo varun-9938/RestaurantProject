@@ -1,13 +1,14 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Restolist Website | Home</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
 <style>
     body {
-        background-image:url('adminop.jpg');
+        background-image:url('adminbg.jpeg');
         text-align: center;
-        padding: 40px 0;
         background-repeat: no-repeat;
         background-size: cover;
     }
@@ -21,7 +22,7 @@
 
     .card {
         background: white;
-        padding: 60px;
+        padding: 40px;
         border-radius: 4px;
         box-shadow: 10px 10px 10px #C8D0D8;
         display: inline-block;
@@ -30,15 +31,38 @@
 
 </style>
 <body>
+<div class="header">
+    <div class="wrap">
+        <div class="header-top">
+            <div class="logo">
+                <a href="homepage.html"><h2 style="font-family:Sofia,sans-serif; font-size:50px;"><i class="fas fa-hotel" style='font-size:36px'></i> Restolist</h2></a>
+                <!--<a href="login.html" style="margin-left: 600%;"><button style='font-size:24px;color: #18d26e'>Back <i class='fas fa-chevron-circle-left'></i></button></a>-->
+            </div>
+            <div class="contact-info">
+                <p class="phone">Call us : <a href="#">9860767468</a></p>
+                <p class="gpa">Gpa : <a href="https://goo.gl/maps/kunb7UF9N1BVKJaB9">View map</a></p>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+    <div class="header-top-nav">
+        <div class="wrap">
+            <ul>
+                <!--<li><a href="gallery.html">Home</a></li>-->
+                <li class="active"><a href="Adminop.html">Back</a></li>
+                <div class="clear"> </div>
+            </ul>
+        </div>
+    </div>
+</div>
 <div class="card">
     <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
         <img src="yay.jpg" alt="descriptive text">
     </div>
-    <br><br><br><br><br><br><br>
     <h1>Restaurant details Updated successfully!!</h1>
     <div class="field btn">
         <div class="btn-layer"></div>
-        <a href="Adminop.html"><input type="submit" i class="fa fa-home" name="value" value="Back To Home"></a>
+        <!--<a href="Adminop.html"><input type="submit" i class="fa fa-home" name="value" value="Back To Home"></a>-->
     </div>
 </div>
 </body>

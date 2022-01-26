@@ -6,6 +6,7 @@ public class RestaurantResponse
     private String resplace;
     private int resprice;
     private String imageString;
+    private int resstar;
 
     public String getResname() {
         return resname;
@@ -31,6 +32,13 @@ public class RestaurantResponse
         this.resprice = resprice;
     }
 
+    public int getResstar() {
+        return resstar;
+    }
+
+    public void setResstar(int resstar) {
+        this.resstar = resstar;
+    }
 
     public String getImageString() {
         return imageString;
@@ -46,7 +54,8 @@ public class RestaurantResponse
                 "resname='" + resname + '\'' +
                 ", resplace='" + resplace + '\'' +
                 ", resprice=" + resprice +
-                ", ImageString='" + imageString + '\'' +
+                ", imageString='" + imageString + '\'' +
+                ", resstar=" + resstar +
                 '}';
     }
 }
